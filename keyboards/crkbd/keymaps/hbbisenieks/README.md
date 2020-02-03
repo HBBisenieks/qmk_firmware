@@ -1,4 +1,6 @@
-# Soundmonster's layout for Corne
+# HBBisenieks' layout for Corne
+
+Forked from soundmonster, but with a thumb cluster and some other stuff closer to my keebio/iris layout
 
 Features:
 
@@ -10,4 +12,3 @@ Features:
 * Mac-friendly (Command and Option on the thumbs)
 * Vim-friendly (Esc, `:` and Ctrl on the thumbs)
 * Full per-key RGB Matrix support out of the box (you still have to go through the nightmare of soldering yourself though 😉)
-
