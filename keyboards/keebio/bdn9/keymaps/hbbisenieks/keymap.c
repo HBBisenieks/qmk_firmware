@@ -30,6 +30,7 @@ enum custom_keycodes {
 #define KC_SAVE LCTL(KC_S) // save
 #define KC_SYNC LALT(KC_S) // sync-lock tracks
 #define KC_SLNC LCTL(KC_L) // silence selection
+#define KC_CUT LCTL(KC_X)
 #define KC_BL_S BL_STEP
 #define KC_RGBM RGB_MOD
 #define KC_RGBT RGB_TOG
@@ -44,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_AUDACITY] = LAYOUT(
     //,-------+-------+-------.
-       KC_LITE,KC_SAVE,KC_ZNRM,
+       KC_SAVE,KC_LITE,KC_ZNRM,
     //|-------+-------+-------|
        KC_SYNC,KC_SLNC,KC_BSPC,
     //|-------+-------+-------|
-       KC_SPC , KC_F1 , KC_F2
+       KC_SPC ,KC_PSTE, KC_CUT
     //`-------+-------+-------'
     ),
     /*
@@ -58,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_LIGHTS] = LAYOUT(
     //,-------+-------+-------.
-         KC_  ,KC_BL_S,KC_STOP,
+       KC_BL_S,  KC_  ,KC_STOP,
     //|-------+-------+-------|
        KC_RGBM,KC_HOME,KC_RGBT,
     //|-------+-------+-------|
-       KC_MPRV,KC_END ,KC_MNXT
+       KC_MPRV, KC_F1 , KC_F2
     //`-------+-------+-------'
     ),
 };
@@ -70,16 +71,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
-            tap_code(KC_LEFT);
-        } else {
             tap_code(KC_RGHT);
+        } else {
+            tap_code(KC_LEFT);
         }
     }
     else if (index == 1) {
         if (clockwise) {
-	    SEND_STRING(SS_LCTRL("3")); // audacity zoom in
+	    SEND_STRING(SS_LCTRL("1")); // audacity zoom in
         } else {
-	    SEND_STRING(SS_LCTRL("1")); // audacity zoom out
+	    SEND_STRING(SS_LCTRL("3")); // audacity zoom out
         }
     }
 }

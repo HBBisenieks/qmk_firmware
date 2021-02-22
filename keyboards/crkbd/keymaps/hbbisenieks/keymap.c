@@ -31,6 +31,7 @@ enum layers {
 #define KC_CTLE RCTL_T(KC_ENT)
 #define KC_AESC RALT_T(KC_ESC)
 #define KC_SLK LGUI(LCTL(KC_Q))
+#define KC_CTS RCTL_T(KC_SPC)
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+-------+------+-------+--------|
     KC_LSPO,  KC_Z,  KC_X,  KC_C,  KC_V,  KC_B,                   KC_N,  KC_M,KC_COMM,KC_DOT,KC_SLSH,KC_RSPC,
   //|------+------+------+------+------+------+------|  |------+------+------+-------+------+-------+--------|
-                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_SPC,RAISE
+                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_CTS,RAISE
                               //`--------------------'  `--------------------'
   ),
 
@@ -62,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+-------+-------+-------+-------|                |------+------+------+------+------+------|
     KC_LSFT, KC_NO,KC_BTN2,KC_WH_D,KC_WH_U,KC_BTN1,                KC_HOME,KC_PGDN,KC_PGUP,KC_END,KC_NO,KC_NO,
   //|------+------+-------+-------+-------+-------+------|  |------+------+------+------+------+------+------|
-                                    LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_SPC,RAISE
+                                    LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_CTS,RAISE
                                   //`--------------------'  `--------------------'
   ),
 
@@ -74,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
     KC_LSFT, KC_F6, KC_F7, KC_F8, KC_F9,KC_F10,                KC_UNDS,KC_PLUS,KC_LBRC,KC_RBRC,KC_BSLS,KC_TILD,
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_SPC,RAISE
+                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_CTS,RAISE
                               //`--------------------'  `--------------------'
   ),
 
@@ -86,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
     RGB_MOD,RGB_HUD,RGB_SAD,RGB_VAD,RGB_SPD,KC_NO,               KC_SCROLLLOCK,KC_VOLD,KC_MPLY,KC_MRWD,KC_MFFD,RGB_RMOD,
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_SPC,RAISE
+                                LOWER,KC_SMIN,KC_LGUI,  KC_CTLE,KC_CTS,RAISE
                               //`--------------------'  `--------------------'
   )
 };
