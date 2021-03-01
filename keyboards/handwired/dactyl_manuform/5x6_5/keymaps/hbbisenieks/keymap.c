@@ -32,6 +32,8 @@ enum custom_keycodes {
 #define KC_TT_L TT(1)
 #define KC_TT_R TT(2)
 
+#define KC_POD TG(3)
+
 #define KC_SLOK LGUI(LCTL(KC_Q)) // mojave lock screen
 #define KC_GUSR GUSR // "gam info user" macro
 #define KC_HGRP HGRP // "history | grep" macro
@@ -91,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_5x6_5(
     //,-------+-------+-------+-------+-------+-------.                             ,-------+-------+-------+-------+-------+-------.
-       KC_GRV,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,                                KC_F6,  KC_F7,  KC_F8,  KC_F9, KC_F10, KC_F11,
+       KC_POD,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,                                KC_F6,  KC_F7,  KC_F8,  KC_F9, KC_F10, KC_F11,
     //|-------+-------+-------+-------+-------+-------|                             |-------+-------+-------+-------+-------+-------|
         KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,                                KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, KC_F12,
     //|-------+-------+-------+-------+-------+-------|                             |-------+-------+-------+-------+-------+-------|
@@ -107,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_PODCAST] = LAYOUT_5x6_5(
     //,-------+-------+-------+-------+-------+-------.                             ,-------+-------+-------+-------+-------+-------.
-        KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,                                KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
+       KC_POD,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,                                KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
     //|-------+-------+-------+-------+-------+-------|                             |-------+-------+-------+-------+-------+-------|
         KC_NO,  KC_NO, KC_ZOUT,KC_ZNRM,KC_ZIN, KC_COPY,                               KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, KC_F12,
     //|-------+-------+-------+-------+-------+-------|                             |-------+-------+-------+-------+-------+-------|
@@ -117,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //`-------+-------+-------+-------+---+---+---+---+---+-------.     ,-------+---+---+---+---+---+-------+-------+-------+-------/
                        KC_F4,  KC_LALT,    KC_BSPC,KC_SLNC,KC_SPC,        KC_UP, KC_ENT, KC_SPC,     KC_PLUS,KC_EQL,
     //                `-------+-------'   `-------+-------+-------|     |-------+-------+-------'   `-------+-------'
-                                                   KC_SYNC,_______,      _______,KC_LALT
+                                                   KC_SYNC,KC_SAVE,      _______,KC_LALT
     //                                            `-------+-------'     `-------+-------'
   ),
 };
