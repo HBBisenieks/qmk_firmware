@@ -21,6 +21,9 @@ enum custom_keycodes {
 #define KC_CAPP LGUI(LSFT(KC_4))        // Capture portion of screen
 #define KC_CPYP LGUI(LSFT(LCTL(KC_4)))  // Copy portion of screen
 
+#define KC_RGBM RGB_MOD
+#define KC_RGBT RGB_TOG
+
 // Left and right shift as mot-tap square braces
 #define KC_LSBR MT(MOD_LSFT, KC_LBRC)
 #define KC_RSBR MT(MOD_RSFT, KC_RBRC)
@@ -59,7 +62,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  [_QUERTY] = LAYOUT_5x6_5(
+  [_QWERTY] = LAYOUT_5x6_5(
     //,-------+-------+-------+-------+-------+-------.                             ,-------+-------+-------+-------+-------+-------.
        KC_GRV,  KC_1,   KC_2,   KC_3,   KC_4,   KC_5,                                 KC_6,   KC_7,   KC_8,   KC_9,   KC_0,  KC_MINS,
     //|-------+-------+-------+-------+-------+-------|                             |-------+-------+-------+-------+-------+-------|
